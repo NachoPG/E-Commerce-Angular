@@ -1,0 +1,14 @@
+<div *ngIf="dataArticles.length > 1" class="container mt-4">
+    <div class="row">
+        <div (click)="navigateDetailArticle(item.id)" style="width: 250px" *ngFor="let item of dataArticles"
+            class="article">
+            <img [src]="item.imageURL" width="150" alt="">
+            <h4>{{item.nameArticle}}</h4>
+            <p>{{item.price | number:'1.2':'es-Es'}}€</p>
+            <div style="position:relative" class="image-box">
+                <img style="position: absolute;bottom:230px" *ngIf="item.favourite"
+                    src="https://svgsilh.com/svg_v2/2445095.svg" width="50" alt="">
+            </div>
+        </div>
+    </div>
+</div>
