@@ -1,0 +1,8 @@
+.article:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.article {
+  cursor: pointer;
+  transition: all 300ms;
+}
